@@ -142,6 +142,10 @@
 
     \subsection{Problem formalization} \label{problem-formalization}
 
+    Ideally, the goal of the first stage of a search is to retrieve all relevant documents from the
+    collection. In this regard, when building a model, it is necessary to strive to ensure that it
+    can return the most complete set of relevant documents in a short period of time.
+
     The task at the first stage of extraction is to train the model on the dataset, which will
     evaluate the relevance pairs consisting of a search query and a document. The model will give
     high scores to pairs that have a high relevance and low scores to pairs that do not. Thus,
