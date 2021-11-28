@@ -60,17 +60,18 @@
 %% The abstract is a short summary of the work to be presented in the
 %% article.
     \begin{abstract}
-        Modern information retrieval models have a two-stage architecture. This is due to the
-        requirements - to search for the most relevant documents in a short time. For a long time,
-        the attention of researchers was focused on the second stage, the stage of ranking a small
-        corpus of documents obtained as a result of the work of the first stage. Thanks to neural
-        networks, significant results have been achieved.
+        Modern information retrieval models have a two-stage architecture.
+        This is due to the requirements - to search for the most relevant documents in a short time.
+        For a long time, the attention of researchers was focused on the second stage, the stage
+        of ranking a small corpus of documents obtained as a result of the work of the first stage.
+        Thanks to neural networks, significant results have been achieved.
 
         Recently, researchers have begun to pay attention to the first stage, since it is important
         to form as many documents as possible corresponding to a search query for subsequent
-        ranking. Due to the fact that at this stage it is necessary to work with millions or
-        billions of documents, work efficiency is very important. An inverted index is very well
-        suited for the task of quickly searching a huge dataset.
+        ranking.
+        Due to the fact that at this stage it is necessary to work with millions or billions of
+        documents, work efficiency is very important.
+        An inverted index is very well suited for the task of quickly searching a huge dataset.
 
         In this paper, we look at modern sparse representation approaches for constructing an
         inverted index.
@@ -94,17 +95,18 @@
 
     \section{Introduction}
 
-    Information retrieval predates the web. Its evolution was stimulated by various problems
-    associated with providing search and access to information sources \cite{manning2008introduction}.
+    Information retrieval predates the web.
+    Its evolution was stimulated by various problems associated with providing search and access
+    to information sources \cite{manning2008introduction}.
     Applications of this discipline are used to access information in databases of various
     organizations.
 
-    But one of the main engines of progress is web search. Now, for most people, this is the main
-    place to find information.
+    But one of the main engines of progress is web search.
+    Now, for most people, this is the main place to find information.
 
     The requirements for search engines are growing every year, the number of documents is growing,
-    and the competition in the market is also high. Therefore, it is necessary to improve the
-    quality of the search.
+    and the competition in the market is also high.
+    Therefore, it is necessary to improve the quality of the search.
 
     For a long time, researchers have focused on the ranking stage, but recently, more and more
     papers have appeared that investigate ways to retrieve more relevant documents
@@ -112,10 +114,11 @@
 
     Significant results in natural language processing have been achieved through
     the use of embeddings, numerical representations of words or other linguistic entities.
-    At the ranking stage, dense embeddings are successfully applied; neural networks are used
-    to form them. But this approach is computationally ineffective due to the large number
-    of documents that need to be worked with at the first stage. Therefore, many researchers pay
-    their attention to sparse embeddings.
+    At the ranking stage, dense embeddings are successfully applied;
+    neural networks are used to form them.
+    But this approach is computationally ineffective due to the large number of documents that
+    need to be worked with at the first stage.
+    Therefore, many researchers pay their attention to sparse embeddings.
 
     In this paper, we will consider some of the currently existing methods for working with sparse
     representations.
@@ -135,23 +138,26 @@
     \end{figure}
 
     In the first stage, during a search in a large body of documents, the initial set of candidate
-    documents is retrieved by using a cheaper ranking model with an inverse index. During the
-    second stage, more accurate but slow models are used to reduce the set of documents obtained
-    from the first stage and leave the most suitable. This approach is widely used in both academic
-    and industrial fields. Moreover, it achieved state-of-the-art results.
+    documents is retrieved by using a cheaper ranking model with an inverse index.
+    During the second stage, more accurate but slow models are used to reduce the set of
+    documents obtained from the first stage and leave the most suitable.
+    This approach is widely used in both academic and industrial fields.
+    Moreover, it achieved state-of-the-art results.
 
     \subsection{Problem formalization} \label{problem-formalization}
 
     Ideally, the goal of the first stage of a search is to retrieve all relevant documents from the
-    collection. In this regard, when building a model, it is necessary to strive to ensure that it
-    can return the most complete set of relevant documents in a short period of time.
+    collection.
+    In this regard, when building a model, it is necessary to strive to ensure that it can return
+    the most complete set of relevant documents in a short period of time.
 
     The task at the first stage of extraction is to train the model on the dataset, which will
-    evaluate the relevance pairs consisting of a search query and a document. The model will give
-    high scores to pairs that have a high relevance and low scores to pairs that do not. Thus,
-    for any query-document pair (\emph{q}, \emph{d}), model \emph{s}(\emph{q},\emph{d}) calculates
-    the degree of relevance between the query and the document. The scoring function is usually
-    represented as follows:
+    evaluate the relevance pairs consisting of a search query and a document.
+    The model will give high scores to pairs that have a high relevance and low scores to
+    pairs that do not.
+    Thus, for any query-document pair (\emph{q}, \emph{d}), model \emph{s}(\emph{q},\emph{d})
+    calculates the degree of relevance between the query and the document.
+    The scoring function is usually represented as follows:
     \begin{equation}
         s(q,d) = f(\phi(q), \psi(d)),
     \end{equation}
@@ -169,17 +175,19 @@
     \subsection{Sparse representation}
 
     Sparse retrieval methods usually represent each document and each query with sparse vectors,
-    where only a small number of dimensions are active. The sparse representation has attracted
-    great attention as it connects to the nature of human memories and shows better interpretability.
+    where only a small number of dimensions are active.
+    The sparse representation has attracted great attention as it connects to the nature of human
+    memories and shows better interpretability.
 
     Besides, sparse representations can be easily integrated into existing inverted indexing
     engines for efficient retrieval.
 
     Without loss of generality, sparse retrieval methods can be categorized into two classes.
     One is to encode queries and documents still in the symbolic space but employ neural models
-    to improve term weighting schemes, namely neural weighting schemes. The other is to directly
-    learn sparse representations, i.e., $\phi(q)$ and $\psi(d)$, in latent space for queries
-    and documents with neural networks, which we call sparse representation learning \cite{SOTA}.
+    to improve term weighting schemes, namely neural weighting schemes.
+    The other is to directly learn sparse representations, i.e., $\phi(q)$ and $\psi(d)$, in
+    latent space for queries and documents with neural networks, which we call sparse
+    representation learning \cite{SOTA}.
 
 
     \section{Models}
@@ -207,17 +215,20 @@
     representation with fewer elements.
 
     Therefore, a model is needed in which the representation sparsity is a function
-    of the input length. Architecture based on Ngram representation learning. For each continuous
-    n words in a given document or query, sparse representations are trained, which are then
-    aggregated via the average pooling. Thus, the document similarity is represented as follows:
+    of the input length.
+    Architecture based on Ngram representation learning.
+    For each continuous n words in a given document or query, sparse representations are trained,
+    which are then aggregated via the average pooling.
+    Thus, the document similarity is represented as follows:
     \begin{equation}
         \phi_D(q)=\frac{1}{|d| - n + 1} \sum_{i=1}^{|d| - n + 1} \phi_{ngram}(w_i, w_{i+1}, \cdots, w_{i+n-1})
     \end{equation}
     where $w_1, w_2, \cdots, w_{|d|}$ - terms in document, $\phi_{ngram}$ - learns a sparse representation
-    for the given ngram. The same function is used for query representation.
+    for the given ngram.
+    The same function is used for query representation.
     Ngram representation function is a fully-connected feed-forward network that uses a sliding
-    window to read the input words and encodes their ngrams. Then embeddings are collected
-    for each term \cite{SNRM}.
+    window to read the input words and encodes their ngrams.
+    Then embeddings are collected for each term \cite{SNRM}.
 
     \paragraph{Loss Function}
     The loss function for the $i^{th}$ training instance has the following form:
@@ -246,7 +257,8 @@
     \end{figure}
     The SparTerm model includes an importance predictor $\mathnormal{F}$ and a gating controller
     $\mathnormal{G}$, it maps the original textual passage \emph{p} to a sparse representation
-    $p'$ in the vocabulary. This process can be represented as follows:
+    $p'$ in the vocabulary.
+    This process can be represented as follows:
 
     \begin{equation}
         \label{eqn:sparterm:mapping-process}
@@ -276,8 +288,8 @@
     \paragraph{Training the importance predictor.}
     There is a set of N training instances $R=\{(q_1, p_{1+}, p_{1-}), ..., (q_N, p_N+, p_N-)\}$,
     each of which contains a query $q_i$, a positive passage $p_{i+}$ and a negative one $p_i-$,
-    such that the first passage is more relevant the query than the second one. As a result,
-    the loss function has the following form:
+    such that the first passage is more relevant the query than the second one.
+    As a result, the loss function has the following form:
     \begin{equation}
         L_{rank}(q_i,p_{i+},p_{i-}) = -log \frac
         {e^{sim(q_i',p_{i+}')}}
@@ -299,8 +311,8 @@
     expanded, second one is for terms that appear in the target text, and \emph{G} is is the dense
     gating probability distribution for \emph{p} \cite{SparTerm}.\\\par
     Thus, SparTerm provides a function that is used to map the frequency-based and bag-of-words
-    representation to a sparse term importance distribution in the whole vocabulary. This model
-    also has limitation: since the gating mechanism is learned in advance, this prevents
+    representation to a sparse term importance distribution in the whole vocabulary.
+    This model also has limitation: since the gating mechanism is learned in advance, this prevents
     the model from learn the optimal sparsification strategy for the ranking task.
 
     \subsection{SPLADE}
@@ -364,8 +376,8 @@
 
     \paragraph{Training}
     During training, it is necessary to make a embeddings inner product for the relevant
-    query-document pairs larger than for the irrelevant ones. The model uses the
-    MultiLabelMarginLoss as loss function:
+    query-document pairs larger than for the irrelevant ones.
+    The model uses the MultiLabelMarginLoss as loss function:
     \begin{multline}
         \mathnormal{L}(q,d_1^+,...,d_m^+,d_{m+1}^-,...,d_n^-) = \\
         \frac{1}{n} \cdot \sum_{1 \leq i \leq m,m < j \leq n}
@@ -418,17 +430,18 @@
     The purpose of this review is to summarize the current research status on sparse representation
     approaches and gain some insights for future development.
     It includes a brief review of existing state-of-the-art sparse retrieval methods, as well as a
-    dense retrieval method for an ad-hoc retrieval task. A brief description of the approaches
-    is given, illustrations are given, and the necessary mathematical equations are outlined.
+    dense retrieval method for an ad-hoc retrieval task.
+    A brief description of the approaches is given, illustrations are given, and the necessary
+    mathematical equations are outlined.
 
     At the end, a comparison was made of the approaches considered, from which it can be seen that
     the SPLADE method has the highest accuracy, followed by the compressed RepBERT, but this
     approach are less effective due to the fact that it is based on dense representations.
 
-    The information provided will be used for further research. Our focus will be more on sparse
-    representations for the first stage of information retrieval. In further works, it is assumed
-    that we have our own stand for researching deep learning models in order to form an index
-    in an information retrieval system.
+    The information provided will be used for further research.
+    Our focus will be more on sparse representations for the first stage of information retrieval.
+    In further works, it is assumed that we have our own stand for researching deep learning
+    models in order to form an index in an information retrieval system.
 
 %%
 %% Define the bibliography file to be used
