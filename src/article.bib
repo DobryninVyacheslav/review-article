@@ -1,315 +1,353 @@
-
 % Journals
 
 % First the Full Name is given, then the abbreviation used in the AMS Math
 % Reviews, with an indication if it could not be found there.
 % Note the 2nd overwrites the 1st, so swap them if you want the full name.
 
- %{AMS}
- @String{AMSTrans = "American Mathematical Society Translations" }
- @String{AMSTrans = "Amer. Math. Soc. Transl." }
- @String{BullAMS = "Bulletin of the American Mathematical Society" }
- @String{BullAMS = "Bull. Amer. Math. Soc." }
- @String{ProcAMS = "Proceedings of the American Mathematical Society" }
- @String{ProcAMS = "Proc. Amer. Math. Soc." }
- @String{TransAMS = "Transactions of the American Mathematical Society" }
- @String{TransAMS = "Trans. Amer. Math. Soc." }
+%{AMS}
+@String{AMSTrans = "American Mathematical Society Translations" }
+@String{AMSTrans = "Amer. Math. Soc. Transl." }
+@String{BullAMS = "Bulletin of the American Mathematical Society" }
+@String{BullAMS = "Bull. Amer. Math. Soc." }
+@String{ProcAMS = "Proceedings of the American Mathematical Society" }
+@String{ProcAMS = "Proc. Amer. Math. Soc." }
+@String{TransAMS = "Transactions of the American Mathematical Society" }
+@String{TransAMS = "Trans. Amer. Math. Soc." }
 
- %ACM
- @String{CACM = "Communications of the {ACM}" }
- @String{CACM = "Commun. {ACM}" }
- @String{CompServ = "Comput. Surveys" }
- @String{JACM = "J. ACM" }
- @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
- @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
- @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
- @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+%ACM
+@String{CACM = "Communications of the {ACM}" }
+@String{CACM = "Commun. {ACM}" }
+@String{CompServ = "Comput. Surveys" }
+@String{JACM = "J. ACM" }
+@String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+@String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+@String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+@String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
 
- @String{AmerSocio = "American Journal of Sociology" }
- @String{AmerStatAssoc = "Journal of the American Statistical Association" }
- @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
- @String{ApplMathComp = "Applied Mathematics and Computation" }
- @String{ApplMathComp = "Appl. Math. Comput." }
- @String{AmerMathMonthly = "American Mathematical Monthly" }
- @String{AmerMathMonthly = "Amer. Math. Monthly" }
- @String{BIT = "{BIT}" }
- @String{BritStatPsych = "British Journal of Mathematical and Statistical
+@String{AmerSocio = "American Journal of Sociology" }
+@String{AmerStatAssoc = "Journal of the American Statistical Association" }
+@String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+@String{ApplMathComp = "Applied Mathematics and Computation" }
+@String{ApplMathComp = "Appl. Math. Comput." }
+@String{AmerMathMonthly = "American Mathematical Monthly" }
+@String{AmerMathMonthly = "Amer. Math. Monthly" }
+@String{BIT = "{BIT}" }
+@String{BritStatPsych = "British Journal of Mathematical and Statistical
           Psychology" }
- @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
- @String{CanMathBull = "Canadian Mathematical Bulletin" }
- @String{CanMathBull = "Canad. Math. Bull." }
- @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
- @String{CompApplMath = "J. Comput. Appl. Math." }
- @String{CompPhys = "Journal of Computational Physics" }
- @String{CompPhys = "J. Comput. Phys." }
- @String{CompStruct = "Computers and Structures" }
- @String{CompStruct = "Comput. \& Structures" }
- @String{CompJour = "The Computer Journal" }
- @String{CompJour = "Comput. J." }
- @String{CompSysSci = "Journal of Computer and System Sciences" }
- @String{CompSysSci = "J. Comput. System Sci." }
- @String{Computing = "Computing" }
- @String{ContempMath = "Contemporary Mathematics" }
- @String{ContempMath = "Contemp. Math." }
- @String{Crelle = "Crelle's Journal" }
- @String{GiornaleMath = "Giornale di Mathematiche" }
- @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+@String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+@String{CanMathBull = "Canadian Mathematical Bulletin" }
+@String{CanMathBull = "Canad. Math. Bull." }
+@String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+@String{CompApplMath = "J. Comput. Appl. Math." }
+@String{CompPhys = "Journal of Computational Physics" }
+@String{CompPhys = "J. Comput. Phys." }
+@String{CompStruct = "Computers and Structures" }
+@String{CompStruct = "Comput. \& Structures" }
+@String{CompJour = "The Computer Journal" }
+@String{CompJour = "Comput. J." }
+@String{CompSysSci = "Journal of Computer and System Sciences" }
+@String{CompSysSci = "J. Comput. System Sci." }
+@String{Computing = "Computing" }
+@String{ContempMath = "Contemporary Mathematics" }
+@String{ContempMath = "Contemp. Math." }
+@String{Crelle = "Crelle's Journal" }
+@String{GiornaleMath = "Giornale di Mathematiche" }
+@String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
 
- %IEEE
- @String{Computer = "{IEEE} Computer" }
- @String{IEEETransComp = "{IEEE} Transactions on Computers" }
- @String{IEEETransComp = "{IEEE} Trans. Comput." }
- @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
- @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
- @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
- @String{ProcIEEE = "Proceedings of the {IEEE}" }
- @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
- @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+%IEEE
+@String{Computer = "{IEEE} Computer" }
+@String{IEEETransComp = "{IEEE} Transactions on Computers" }
+@String{IEEETransComp = "{IEEE} Trans. Comput." }
+@String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+@String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+@String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+@String{ProcIEEE = "Proceedings of the {IEEE}" }
+@String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+@String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
      Systems" }
- @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+@String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
 
- @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
- @String{IMANumerAna = "{IMA} J. Numer. Anal." }
- @String{InfProcLet = "Information Processing Letters" }
- @String{InfProcLet = "Inform. Process. Lett." }
- @String{InstMathApp = "Journal of the Institute of Mathematics and
+@String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+@String{IMANumerAna = "{IMA} J. Numer. Anal." }
+@String{InfProcLet = "Information Processing Letters" }
+@String{InfProcLet = "Inform. Process. Lett." }
+@String{InstMathApp = "Journal of the Institute of Mathematics and
      its Applications" }
- @String{InstMathApp = "J. Inst. Math. Appl." }
- @String{IntControl = "International Journal of Control" }
- @String{IntControl = "Internat. J. Control" }
- @String{IntNumerEng = "International Journal for Numerical Methods in
+@String{InstMathApp = "J. Inst. Math. Appl." }
+@String{IntControl = "International Journal of Control" }
+@String{IntControl = "Internat. J. Control" }
+@String{IntNumerEng = "International Journal for Numerical Methods in
      Engineering" }
- @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
- @String{IntSuper = "International Journal of Supercomputing Applications" }
- @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+@String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+@String{IntSuper = "International Journal of Supercomputing Applications" }
+@String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
 %% in AMS MR
- @String{Kibernetika = "Kibernetika" }
- @String{JResNatBurStand = "Journal of Research of the National Bureau
+@String{Kibernetika = "Kibernetika" }
+@String{JResNatBurStand = "Journal of Research of the National Bureau
      of Standards" }
- @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
- @String{LinAlgApp = "Linear Algebra and its Applications" }
- @String{LinAlgApp = "Linear Algebra Appl." }
- @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
- @String{MathAnaAppl = "J. Math. Anal. Appl." }
- @String{MathAnnalen = "Mathematische Annalen" }
- @String{MathAnnalen = "Math. Ann." }
- @String{MathPhys = "Journal of Mathematical Physics" }
- @String{MathPhys = "J. Math. Phys." }
- @String{MathComp = "Mathematics of Computation" }
- @String{MathComp = "Math. Comp." }
- @String{MathScand = "Mathematica Scandinavica" }
- @String{MathScand = "Math. Scand." }
- @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
- @String{TablesAidsComp = "Math. Tables Aids Comput." }
- @String{NumerMath = "Numerische Mathematik" }
- @String{NumerMath = "Numer. Math." }
- @String{PacificMath = "Pacific Journal of Mathematics" }
- @String{PacificMath = "Pacific J. Math." }
- @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
- @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+@String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+@String{LinAlgApp = "Linear Algebra and its Applications" }
+@String{LinAlgApp = "Linear Algebra Appl." }
+@String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+@String{MathAnaAppl = "J. Math. Anal. Appl." }
+@String{MathAnnalen = "Mathematische Annalen" }
+@String{MathAnnalen = "Math. Ann." }
+@String{MathPhys = "Journal of Mathematical Physics" }
+@String{MathPhys = "J. Math. Phys." }
+@String{MathComp = "Mathematics of Computation" }
+@String{MathComp = "Math. Comp." }
+@String{MathScand = "Mathematica Scandinavica" }
+@String{MathScand = "Math. Scand." }
+@String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+@String{TablesAidsComp = "Math. Tables Aids Comput." }
+@String{NumerMath = "Numerische Mathematik" }
+@String{NumerMath = "Numer. Math." }
+@String{PacificMath = "Pacific Journal of Mathematics" }
+@String{PacificMath = "Pacific J. Math." }
+@String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+@String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
 %% in AMS MR
- @String{ParComputing = "Parallel Computing" }
- @String{ParComputing = "Parallel Comput." }
- @String{PhilMag = "Philosophical Magazine" }
- @String{PhilMag = "Philos. Mag." }
- @String{ProcNAS = "Proceedings of the National Academy of Sciences
+@String{ParComputing = "Parallel Computing" }
+@String{ParComputing = "Parallel Comput." }
+@String{PhilMag = "Philosophical Magazine" }
+@String{PhilMag = "Philos. Mag." }
+@String{ProcNAS = "Proceedings of the National Academy of Sciences
                     of the USA" }
- @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
- @String{Psychometrika = "Psychometrika" }
- @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
- @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
- @String{QuartApplMath = "Quarterly of Applied Mathematics" }
- @String{QuartApplMath = "Quart. Appl. Math." }
- @String{RevueInstStat = "Review of the International Statisical Institute" }
- @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+@String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+@String{Psychometrika = "Psychometrika" }
+@String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+@String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+@String{QuartApplMath = "Quarterly of Applied Mathematics" }
+@String{QuartApplMath = "Quart. Appl. Math." }
+@String{RevueInstStat = "Review of the International Statisical Institute" }
+@String{RevueInstStat = "Rev. Inst. Internat. Statist." }
 
- %SIAM
- @String{JSIAM = "Journal of the Society for Industrial and Applied
+%SIAM
+@String{JSIAM = "Journal of the Society for Industrial and Applied
      Mathematics" }
- @String{JSIAM = "J. Soc. Indust. Appl. Math." }
- @String{JSIAMB = "Journal of the Society for Industrial and Applied
+@String{JSIAM = "J. Soc. Indust. Appl. Math." }
+@String{JSIAMB = "Journal of the Society for Industrial and Applied
      Mathematics, Series B, Numerical Analysis" }
- @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
- @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
- @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
- @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
- @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
- @String{SIAMComp = "{SIAM} Journal on Computing" }
- @String{SIAMComp = "{SIAM} J. Comput." }
- @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
- @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
- @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
- @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
- @String{SIAMReview = "{SIAM} Review" }
- @String{SIAMReview = "{SIAM} Rev." }
- @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+@String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+@String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+@String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+@String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+@String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+@String{SIAMComp = "{SIAM} Journal on Computing" }
+@String{SIAMComp = "{SIAM} J. Comput." }
+@String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+@String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+@String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+@String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+@String{SIAMReview = "{SIAM} Review" }
+@String{SIAMReview = "{SIAM} Rev." }
+@String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
      Computing" }
- @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+@String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
 
- @String{SoftPracExp = "Software Practice and Experience" }
- @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
- @String{StatScience = "Statistical Science" }
- @String{StatScience = "Statist. Sci." }
- @String{Techno = "Technometrics" }
- @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+@String{SoftPracExp = "Software Practice and Experience" }
+@String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+@String{StatScience = "Statistical Science" }
+@String{StatScience = "Statist. Sci." }
+@String{Techno = "Technometrics" }
+@String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
      Physics" }
- @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
- @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
- @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
- @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+@String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+@String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+@String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+@String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
      Mechanik" }
- @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
- @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
- @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+@String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+@String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+@String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
 
 % Publishers % ================================================= |
 
- @String{Academic = "Academic Press" }
- @String{ACMPress = "{ACM} Press" }
- @String{AdamHilger = "Adam Hilger" }
- @String{AddisonWesley = "Addison-Wesley" }
- @String{AllynBacon = "Allyn and Bacon" }
- @String{AMS = "American Mathematical Society" }
- @String{Birkhauser = "Birkha{\"u}ser" }
- @String{CambridgePress = "Cambridge University Press" }
- @String{Chelsea = "Chelsea" }
- @String{ClaredonPress = "Claredon Press" }
- @String{DoverPub = "Dover Publications" }
- @String{Eyolles = "Eyolles" }
- @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
- @String{Interscience = "Interscience" }
- @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
- @String{JohnWileySons = "John Wiley and Sons" }
- @String{Macmillan = "Macmillan" }
- @String{MathWorks = "The Math Works Inc." }
- @String{McGrawHill = "McGraw-Hill" }
- @String{NatBurStd = "National Bureau of Standards" }
- @String{NorthHolland = "North-Holland" }
- @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
- @String{PergamonPress = "Pergamon Press" }
- @String{PlenumPress = "Plenum Press" }
- @String{PrenticeHall = "Prentice-Hall" }
- @String{SIAMPub = "{SIAM} Publications" }
- @String{Springer = "Springer-Verlag" }
- @String{TexasPress = "University of Texas Press" }
- @String{VanNostrand = "Van Nostrand" }
- @String{WHFreeman = "W. H. Freeman and Co." }
+@String{Academic = "Academic Press" }
+@String{ACMPress = "{ACM} Press" }
+@String{AdamHilger = "Adam Hilger" }
+@String{AddisonWesley = "Addison-Wesley" }
+@String{AllynBacon = "Allyn and Bacon" }
+@String{AMS = "American Mathematical Society" }
+@String{Birkhauser = "Birkha{\"u}ser" }
+@String{CambridgePress = "Cambridge University Press" }
+@String{Chelsea = "Chelsea" }
+@String{ClaredonPress = "Claredon Press" }
+@String{DoverPub = "Dover Publications" }
+@String{Eyolles = "Eyolles" }
+@String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+@String{Interscience = "Interscience" }
+@String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+@String{JohnWileySons = "John Wiley and Sons" }
+@String{Macmillan = "Macmillan" }
+@String{MathWorks = "The Math Works Inc." }
+@String{McGrawHill = "McGraw-Hill" }
+@String{NatBurStd = "National Bureau of Standards" }
+@String{NorthHolland = "North-Holland" }
+@String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+@String{PergamonPress = "Pergamon Press" }
+@String{PlenumPress = "Plenum Press" }
+@String{PrenticeHall = "Prentice-Hall" }
+@String{SIAMPub = "{SIAM} Publications" }
+@String{Springer = "Springer-Verlag" }
+@String{TexasPress = "University of Texas Press" }
+@String{VanNostrand = "Van Nostrand" }
+@String{WHFreeman = "W. H. Freeman and Co." }
 
 %Entries
 
 @article{SOTA,
-  author        = {Jiafeng Guo and Yinqiong Cai and Yixing Fan and Fei Sun and Ruqing Zhang and Xueqi Cheng.},
-  title         = {Semantic Models for the First-stage Retrieval: A Comprehensive Review},
-  journal       = {ACM Transactions on Information Systems},
-  volume        = {43},
-  number        = {1},
-  month         = jan,
-  year          = {2021},
-  pages         = {1--43},
-  doi           = {10.1145/3486250},
-  OPTurl        = {https://doi.org/10.1145/3486250},
-  note          = {}
+    author = {Jiafeng Guo and Yinqiong Cai and Yixing Fan and Fei Sun and Ruqing Zhang and Xueqi
+    Cheng.},
+    title = {Semantic Models for the First-stage Retrieval: A Comprehensive Review},
+    journal = {ACM Transactions on Information Systems},
+    volume = {43},
+    number = {1},
+    month = jan,
+    year = {2021},
+    pages = {1--43},
+    doi = {10.1145/3486250},
+    OPTurl = {https://doi.org/10.1145/3486250},
+    note = {}
 }
 
 @article{SNRM,
-  author        = {Hamed Zamani and Mostafa Dehghani and W. Bruce Croft and Erik Learned-Miller and Jaap Kamps},
-  title         = {From Neural Re-Ranking to Neural Ranking: Learn- ing a Sparse Representation for Inverted Indexing},
-  journal       = {The 27th ACM International Conference on Information and Knowledge Management (CIKM ’18)},
-  volume        = {10},
-  month         = oct,
-  year          = {2018},
-  doi           = {10.1145/3269206.3271800},
-  OPTurl        = {https://doi.org/10.1145/3269206.3271800}
+    author = {Hamed Zamani and Mostafa Dehghani and W. Bruce Croft and Erik Learned-Miller and
+    Jaap Kamps},
+    title = {From Neural Re-Ranking to Neural Ranking: Learn- ing a Sparse Representation for
+    Inverted Indexing},
+    journal = {The 27th ACM International Conference on Information and Knowledge Management
+    (CIKM ’18)},
+    volume = {10},
+    month = oct,
+    year = {2018},
+    doi = {10.1145/3269206.3271800},
+    OPTurl = {https://doi.org/10.1145/3269206.3271800}
 }
 
 @article{SparTerm,
-  author        = {Yang Bai and Xiaoguang Li and Gang Wang and Chaoliang Zhang and Lifeng Shang and Jun Xu and Zhaowei Wang and Fangshan Wang and Qun Liu},
-  title         = {SparTerm: Learning Term-based Sparse Representation for Fast Text Retrieval.},
-  journal       = {arXiv preprint arXiv:2010.00768.},
-  volume        = {8},
-  month         = oct,
-  year          = {2020}
+    author = {Yang Bai and Xiaoguang Li and Gang Wang and Chaoliang Zhang and Lifeng Shang and
+    Jun Xu and Zhaowei Wang and Fangshan Wang and Qun Liu},
+    title = {SparTerm: Learning Term-based Sparse Representation for Fast Text Retrieval.},
+    journal = {arXiv preprint arXiv:2010.00768.},
+    volume = {8},
+    month = oct,
+    year = {2020}
 }
 
 @article{BERT,
-  author        = {Jacob Devlin and Ming-Wei Chang and Kenton Lee and Kristina Toutanova},
-  title         = {Bert: Pre-training of deep bidirectional
+    author = {Jacob Devlin and Ming-Wei Chang and Kenton Lee and Kristina Toutanova},
+    title = {Bert: Pre-training of deep bidirectional
 transformers for language understanding},
-  journal       = {arXiv preprint arXiv:1810.04805,},
-  year          = {2018}
+    journal = {arXiv preprint arXiv:1810.04805,},
+    year = {2018}
 }
 
 @article{RepBERT,
-  author        = {Jingtao Zhan and Jiaxin Mao and Yiqun Liu and Min Zhang and Shaoping Ma},
-  title         = {RepBERT: Contextualized Text Embeddings for First-Stage Retrieval},
-  journal       = {CoRR abs/2006.15498},
-  month         = jul,
-  year          = {2020}
+    author = {Jingtao Zhan and Jiaxin Mao and Yiqun Liu and Min Zhang and Shaoping Ma},
+    title = {RepBERT: Contextualized Text Embeddings for First-Stage Retrieval},
+    journal = {CoRR abs/2006.15498},
+    month = jul,
+    year = {2020}
 }
 
 @article{SPLADE,
-  author        = {Thibault Formal and Benjamin Piwowarski and Stéphane Clinchant},
-  title         = {SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking},
-  journal       = {In Proceedings of ACM Conference (Conference’17). ACM},
-  volume        = {5},
-  month         = {jul},
-  year          = {2021}
+    author = {Thibault Formal and Benjamin Piwowarski and Stéphane Clinchant},
+    title = {SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking},
+    journal = {In Proceedings of ACM Conference (Conference’17). ACM},
+    volume = {5},
+    month = {jul},
+    year = {2021}
 }
 
 @article{MS-MARCO,
-  author        = {Tri Nguyen and Mir Rosenberg and Xia Song and Jianfeng Gao and Saurabh Tiwary, Rangan Majumder and Li Deng},
-  title         = {MS MARCO: A Human Generated MAchine Reading COmprehension Dataset.},
-  journal       = {In Proceedings of the Workshop on Cognitive Computation: Integrating neural and symbolic approaches 2016 (CEUR Workshop Proceedings, Vol. 1773)},
-  year          = {2016}
+    author = {Tri Nguyen and Mir Rosenberg and Xia Song and Jianfeng Gao and Saurabh Tiwary,
+    Rangan Majumder and Li Deng},
+    title = {MS MARCO: A Human Generated MAchine Reading COmprehension Dataset.},
+    journal = {In Proceedings of the Workshop on Cognitive Computation: Integrating neural and
+    symbolic approaches 2016 (CEUR Workshop Proceedings, Vol. 1773)},
+    year = {2016}
 }
 
 @article{IBN1,
-  author        = {Yingqi Qu Yuchen Ding and Jing Liu and Kai Liu and Ruiyang Ren and Xin Zhao and Daxiang Dong and Hua Wu and Haifeng Wang},
-  title         = {RocketQA: An Optimized Training Approach to Dense Passage Retrieval for Open-Domain Question Answering.},
-  journal       = {arXiv:2010.08191},
-  year          = {2020}
+    author = {Yingqi Qu Yuchen Ding and Jing Liu and Kai Liu and Ruiyang Ren and Xin Zhao and
+    Daxiang Dong and Hua Wu and Haifeng Wang},
+    title = {RocketQA: An Optimized Training Approach to Dense Passage Retrieval for Open-Domain
+    Question Answering.},
+    journal = {arXiv:2010.08191},
+    year = {2020}
 }
 
 @article{IBN2,
-  author        = {Vladimir Karpukhin and Barlas Oğuz and Sewon Min and Patrick Lewis and Ledell Wu and Sergey Edunov and Danqi Chen and Wen tau Yih.},
-  title         = {Dense Passage Retrieval for Open- Domain Question Answering.},
-  journal       = {arXiv:2004.04906},
-  year          = {2020}
+    author = {Vladimir Karpukhin and Barlas Oğuz and Sewon Min and Patrick Lewis and Ledell Wu
+    and Sergey Edunov and Danqi Chen and Wen tau Yih.},
+    title = {Dense Passage Retrieval for Open- Domain Question Answering.},
+    journal = {arXiv:2004.04906},
+    year = {2020}
 }
 
 @article{IBN3,
-  author        = {Sheng-Chieh Lin and Jheng-Hong Yang and Jimmy Lin},
-  title         = {DistillingDenseRepre- sentations for Ranking using Tightly-Coupled Teachers.},
-  journal       = {arXiv:2010.11386},
-  year          = {2020}
+    author = {Sheng-Chieh Lin and Jheng-Hong Yang and Jimmy Lin},
+    title = {DistillingDenseRepre- sentations for Ranking using Tightly-Coupled Teachers.},
+    journal = {arXiv:2010.11386},
+    year = {2020}
 }
 
 @book{IRNLP,
-  author        = {Hang Li},
-  title         = {Learning to Rank for Information Retrieval and Natural Language Processing.},
-  year          = {2011}
+    author = {Hang Li},
+    title = {Learning to Rank for Information Retrieval and Natural Language Processing.},
+    year = {2011}
 }
 
 @article{hendrycks2016gelu,
-  title={Gaussian Error Linear Units (GELUs)},
-  author={Hendrycks, Dan and Gimpel, Kevin},
-  journal={arXiv preprint arXiv:1606.08415},
-  year={2016}
+    title = {Gaussian Error Linear Units (GELUs)},
+    author = {Hendrycks, Dan and Gimpel, Kevin},
+    journal = {arXiv preprint arXiv:1606.08415},
+    year = {2016}
+}
+
+@article{termBasedModelEfficiency1,
+    author = {Ruey-Cheng Chen and Luke Gallagher and Roi Blanco and J. Shane Culpepper},
+    title = {Efficient Cost-Aware Cascade Ranking in Multi-Stage Retrieval},
+    journal = {Proceedings of the 40th International ACM SIGIR Conference on Research and
+    Development in Information Retrieval},
+    year = {2017},
+    OPTurl = {https://doi.org/10.1145/3077136.3080819},
+    doi = {10.1145/3077136.3080819},
+    pages = {445--454},
+}
+
+@article{termBasedModelEfficiency2,
+    author = {Shichen Liu and Fei Xiao and Wenwu Ou and Luo Si},
+    title = {Cascade Ranking for Operational E-Commerce Search},
+    journal = {Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+    year = {2017},
+    pages = {1557--1565},
+    OPTurl = {https://doi.org/10.1145/3097983.3098011},
+    doi = {10.1145/3097983.3098011},
 }
 
 @book{manning2008introduction,
-  abstract = {Class-tested and coherent, this textbook teaches classical and web information retrieval, including web search and the related areas of text classification and text clustering from basic concepts. It gives an up-to-date treatment of all aspects of the design and implementation of systems for gathering, indexing, and searching documents; methods for evaluating systems; and an introduction to the use of machine learning methods on text collections. All the important ideas are explained using examples and figures, making it perfect for introductory courses in information retrieval for advanced undergraduates and graduate students in computer science. Based on feedback from extensive classroom experience, the book has been carefully structured in order to make teaching more natural and effective.},
-  added-at = {2010-12-20T06:06:48.000+0100},
-  address = {Cambridge, UK},
-  author = {Manning, Christopher D. and Raghavan, Prabhakar and Schütze, Hinrich},
-  biburl = {https://www.bibsonomy.org/bibtex/29f4ab13e07b48b9723113aa74224be65/folke},
-  interhash = {2e574e46b7668a7268e7f02b46f4d9bb},
-  intrahash = {9f4ab13e07b48b9723113aa74224be65},
-  isbn = {978-0-521-86571-5},
-  keywords = {book information introduction ir retrieval},
-  publisher = {Cambridge University Press},
-  timestamp = {2010-12-20T06:06:48.000+0100},
-  title = {Introduction to Information Retrieval},
-  url = {http://nlp.stanford.edu/IR-book/information-retrieval-book.html},
-  year = 2008
+    abstract = {Class-tested and coherent, this textbook teaches classical and web informatio
+    retrieval, including web search and the related areas of text classification and text
+    clustering from basic concepts. It gives an up-to-date treatment of all aspects of the design
+ and implementation of systems for gathering, indexing, and searching documents; methods for
+    evaluating systems; and an introduction to the use of machine learning methods on text
+    collections. All the important ideas are explained using examples and figures, making it
+    perfect for introductory courses in information retrieval for advanced undergraduates and
+    graduate students in computer science. Based on feedback from extensive classroom experience,
+ the book has been carefully structured in order to make teaching more natural and effective.},
+    added-at = {2010-12-20T06:06:48.000+0100},
+    address = {Cambridge, UK},
+    author = {Manning, Christopher D. and Raghavan, Prabhakar and Schütze, Hinrich},
+    biburl = {https://www.bibsonomy.org/bibtex/29f4ab13e07b48b9723113aa74224be65/folke},
+    interhash = {2e574e46b7668a7268e7f02b46f4d9bb},
+    intrahash = {9f4ab13e07b48b9723113aa74224be65},
+    isbn = {978-0-521-86571-5},
+    keywords = {book information introduction ir retrieval},
+    publisher = {Cambridge University Press},
+    timestamp = {2010-12-20T06:06:48.000+0100},
+    title = {Introduction to Information Retrieval},
+    url = {http://nlp.stanford.edu/IR-book/information-retrieval-book.html},
+    year = 2008
 }
