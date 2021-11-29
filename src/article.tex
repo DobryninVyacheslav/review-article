@@ -154,6 +154,22 @@
     For a long time, term-based models were used for the first stage of search, which showed high
     efficiency due to simple logic and the use of an inverse index
     \cite{termBasedModelEfficiency1, termBasedModelEfficiency2}.
+    However, this approach has drawbacks in the form of vocabulary mismatch
+    \cite{vocabularyMismatch1, vocabularyMismatch2} and lack of consideration of the order of
+    terms in documents \cite{ignoringTermOrdering}.
+    Thus, term-based models can lose some of the relevant documents at the very beginning.
+    To get rid of these limitations, various solutions have been proposed, such as vocabularies
+    of synonyms or query \cite{queryExp1,queryExp2,queryExp3,queryExp4} and document
+    \cite{docExp1, docExp2, docExp3} expansion.
+    However, progress has been limited due to the fact that these approaches still remain in
+    the term-based paradigm and inherit its limitations.
+
+    To solve this problem, you can train a neural network that will encode the query and the
+    document so that they are in the same semantic space. Most often such spaces are dense
+    representations, but they are algorithmically complex because it is necessary to iterate over
+    the vectors of documents during the search. In this regard, the researchers decided to
+    represent documents and queries in vector spaces of higher dimension (sparse representations)
+    with their further application on the inverse index.
 
     The task at the first stage of extraction is to train the model on the dataset, which will
     evaluate the relevance pairs consisting of a search query and a document.
@@ -175,6 +191,12 @@
         \item The query representation function $\phi$ and scoring function \emph{f} should be as
         efficient as possible, since they are calculated online \cite{SOTA}.
     \end{itemize}
+
+    An example is the BM25 \cite{bm25} algorithm which is a retrieval function based on a bag of
+    words.
+    The scoring function uses TF-IDF weights and term matching at its core in order to
+    determine the similarity of a document and a query, with its help at the first stage of
+    the search, candidate documents are retrieved for subsequent re-ranking.
 
     \subsection{Sparse representation}
 
