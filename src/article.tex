@@ -204,9 +204,14 @@
     where only a small number of dimensions are active.
     The sparse representation has attracted great attention as it connects to the nature of human
     memories and shows better interpretability.
+    Since usually the term is replaced with a numeric value and has a one-to-one correspondence
+    in the vocabulary of words.
+    This feature makes it easy to use sparse representations on an inverted index, in this case
+    each value of the term map to the document in which it occurs.
 
-    Besides, sparse representations can be easily integrated into existing inverted indexing
-    engines for efficient retrieval.
+    During the search, the query is broken down into terms in the same way as documents, then
+    they are used as keys in the inverted index to find the corresponding documents.
+    The more query terms are found in a document, the more suitable it is for re-ranking.
 
     Without loss of generality, sparse retrieval methods can be categorized into two classes.
     One is to encode queries and documents still in the symbolic space but employ neural models
