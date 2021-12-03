@@ -152,8 +152,8 @@
     the most complete set of relevant documents in a short period of time.
 
     For a long time, term-based models were used for the first stage of search, which showed high
-    efficiency due to simple logic and the use of an inverse index
-    \cite{termBasedModelEfficiency1, termBasedModelEfficiency2}.
+    efficiency \cite{termBasedModelEfficiency1, termBasedModelEfficiency2} due to simple logic
+    and the use of an inverse index.
     However, this approach has drawbacks in the form of vocabulary mismatch
     \cite{vocabularyMismatch1, vocabularyMismatch2} and lack of consideration of the order of
     terms in documents \cite{ignoringTermOrdering}.
@@ -212,6 +212,8 @@
     During the search, the query is broken down into terms in the same way as documents, then
     they are used as keys in the inverted index to find the corresponding documents.
     The more query terms are found in a document, the more suitable it is for re-ranking.
+    For details on the inverted index technique, see
+    \cite{invertedIndexTechnique1, invertedIndexTechnique2}
 
     Without loss of generality, sparse retrieval methods can be categorized into two classes.
     One is to encode queries and documents still in the symbolic space but employ neural models
