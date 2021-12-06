@@ -355,9 +355,17 @@
     of the limitation described above.
 
     \paragraph{Architecture}
+    \begin{figure}[h]
+        \centering
+        \def\svgwidth{\columnwidth}
+        \input{SPLADE.pdf_tex}
+        \caption{Final representation calculation with log saturation}
+        \label{fig:SPLADE}
+    \end{figure}
     The importance estimation formula Equation (\ref{eqn:sparterm:importance-predictor})
-    has been modified by adding a log-saturation effect, in order to prevent the dominance
-    of some terms to dominate and naturally ensures sparsity in representations:
+    has been modified by adding a log-saturation effect (Figure \ref{fig:SPLADE}), in order to
+    prevent the dominance of some terms to dominate and naturally ensures sparsity in
+    representations:
     \begin{equation}
         w_j=\sum_{i \in t}log(1+ReLU(w_{ij}))
     \end{equation}
