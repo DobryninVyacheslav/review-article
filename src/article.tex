@@ -428,7 +428,7 @@
     \paragraph{Training}
     During training, it is necessary to make a embeddings inner product for the relevant
     query-document pairs larger than for the irrelevant ones.
-    The model uses the MultiLabelMarginLoss as loss function:
+    The model uses the MultiLabelMarginLoss \cite{multiLabelMarginLoss} as loss function:
     \begin{multline}
         \mathnormal{L}(q,d_1^+,...,d_m^+,d_{m+1}^-,...,d_n^-) = \\
         \frac{1}{n} \cdot \sum_{1 \leq i \leq m,m < j \leq n}
