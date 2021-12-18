@@ -422,8 +422,9 @@
     to receive relevance scores:
 
     \begin{equation}
-        Rel(query,doc) = Embed(query)^T \cdot Embed(doc)
+        s(q,d) = Embed(q)^T \cdot Embed(d)
     \end{equation}
+    where $Embed(q)^T$ and $Embed(d)$ are $\phi(q)$ and $\psi(d)$ respectively.
 
     \paragraph{Training}
     During training, it is necessary to make a embeddings inner product for the relevant
