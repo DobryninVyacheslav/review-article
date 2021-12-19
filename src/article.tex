@@ -325,6 +325,7 @@
     one $d_i-$, such that the first document is more relevant the query than the second one.
     As a result, the loss function has the following form:
     \begin{equation}
+        \label{eqn:sparterm:loss}
         L_{rank} = -log \frac
         {e^{s(q_i,d_{i+})}}
         {e^{s(q_i,d_{i+})} + e^{s(q_i,d_{i-})}}
@@ -366,11 +367,13 @@
     prevent the dominance of some terms to dominate and naturally ensures sparsity in
     representations:
     \begin{equation}
+        \label{eqn:splade:importance}
         w_j=\sum_{i \in t}log(1+ReLU(w_{ij}))
     \end{equation}
 
     \paragraph{Loss function}
-    The loss function has the following form:
+    The function presented in the Equation (\ref{eqn:sparterm:loss}) is supplemented with negative
+    sampling as shown below:
     \begin{equation}
         L_{rank-IBN}=-log
         \frac{
@@ -384,7 +387,17 @@
     where IBN is in-batch negatives sampling strategy, which is effective for learning first-stage
     rankers \cite{IBN1,IBN2,IBN3}, $q_i$ is query, $d_i^+$ and $d_i^-$ are positive and negative
     documents respectively, ${d_{i,j}^-}$ is set of positive documents from other queries,
-    but negative for the current one \cite{SPLADE}.\\\par
+    but negative for the current one \cite{SPLADE}.
+
+    This approach does not use binary gating as in SparTerm, and instead learn model (Equation
+    \ref{eqn:splade:importance}) jointly optimizing ranking and regularization losses:
+    \begin{equation}
+        L = L_{rank-IBN} + \lambda_q L^q_{reg} + \lambda_d L^d_{reg}
+    \end{equation}
+    where $L_{reg}$ is a sparse regularisation ($L_1$ or $L_{FLOPS}$), $\lambda_q$ and
+    $\lambda_d$ are tunable hyper-parameters to control the sparsity of the query and the
+    document. \newline
+
     As a result, SPLADE is simple and effective model in information retrieval tasks.
 
     \subsection{RepBERT}
