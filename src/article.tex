@@ -320,18 +320,17 @@
     where L is the input sequence length.
 
     \paragraph{Training the importance predictor.}
-    There is a set of N training instances $R=\{(q_1, p_{1+}, p_{1-}), ..., (q_N, p_N+, p_N-)\}$,
-    each of which contains a query $q_i$, a positive passage $p_{i+}$ and a negative one $p_i-$,
-    such that the first passage is more relevant the query than the second one.
+    There is a set of N training instances $R=\{(q_1, d_{1+}, d_{1-}), ..., (q_N, d_N+, d_N-)\}$,
+    each of which contains a query $q_i$, a positive document (passage) $d_{i+}$ and a negative
+    one $d_i-$, such that the first document is more relevant the query than the second one.
     As a result, the loss function has the following form:
     \begin{equation}
-        L_{rank}(q_i,p_{i+},p_{i-}) = -log \frac
-        {e^{sim(q_i',p_{i+}')}}
-        {e^{sim(q_i',p_{i+}')} + e^{sim(q_i',p_{i-}')}}
+        L_{rank} = -log \frac
+        {e^{s(q_i,d_{i+})}}
+        {e^{s(q_i,d_{i+})} + e^{s(q_i,d_{i-})}}
     \end{equation}
-    where $q_i',p_{i+}',p_{i-}'$ is the sparse representation of $q_i,p_{i+},p_{i-}$
-    received by Equation (\ref{eqn:sparterm:mapping-process}), \emph{sim} represents a function
-    to measure the similarity (e.g. dot product).
+    where $s(q,d)$ is denote the ranking score obtained via dot product between $d$ and $q$
+    representations from Equation (\ref{eqn:sparterm:mapping-process}).
 
     \paragraph{Training the gating controller.}
     Consider a passage-query/summary parallel corpus \emph{C}, which contains passage \emph{p}, the
