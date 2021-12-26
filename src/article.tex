@@ -499,13 +499,15 @@
     mathematical equations are outlined.
 
     At the end, a comparison was made of the approaches considered, from which it can be seen that
-    the SPLADE method has the highest accuracy, followed by the compressed RepBERT, but this
-    approach are less effective due to the fact that it is based on dense representations.
+    the SPLADE method has the highest accuracy, followed by the RepBERT, but this
+    approach are less effective due to the fact that it is based on dense representations the
+    embeddings for which are stored in a relatively slow vector database.
+    However, SPLADE is slower to learn than SparTerm due to the use of negative sampling.
 
-    The information provided will be used for further research.
-    Our focus will be more on sparse representations for the first stage of information retrieval.
-    In further works, it is assumed that we have our own stand for researching deep learning
-    models in order to form an index in an information retrieval system.
+    In further works, it is assumed that we have our own stand.
+    The obtained stand is planned to be used for further research, the purpose of which is to
+    develop an algorithm based on sparse representations with a search accuracy similar to
+    current state-of-the-art, but requiring less computational resources and memory.
 
 %%
 %% Define the bibliography file to be used
