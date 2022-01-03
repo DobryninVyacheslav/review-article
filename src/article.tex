@@ -255,11 +255,19 @@
     which are then aggregated via the average pooling.
     Thus, the document similarity is represented as follows:
     \begin{equation}
-        \phi_D(q)=\frac{1}{|d| - n + 1} \sum_{i=1}^{|d| - n + 1} \phi_{ngram}(w_i, w_{i+1}, \cdots, w_{i+n-1})
+        \psi(d)=
+        \frac{1}{|d| - n + 1}
+        \sum_{i=1}^{|d| - n + 1}
+        \psi_{ngram}(w_i, w_{i+1}, \cdots, w_{i+n-1})
     \end{equation}
-    where $w_1, w_2, \cdots, w_{|d|}$ - terms in document, $\phi_{ngram}$ - learns a sparse representation
+    where $w_1, w_2, \cdots, w_{|d|}$ - terms in document, $\psi_{ngram}$ - learns a sparse representation
     for the given ngram.
+
     The same function is used for query representation.
+
+    The matching function for score is defined as the dot product of the document and query
+    representations.
+
     Ngram representation function is a fully-connected feed-forward network that uses a sliding
     window to read the input words and encodes their ngrams.
     Then embeddings are collected for each term \cite{SNRM}.
@@ -267,7 +275,7 @@
     \paragraph{Loss Function}
     The loss function for the $i^{th}$ training instance has the following form:
     \begin{equation}
-        \mathcal{L}(q_i,d_{i1},d_{i2},y_i) + \lambda\;L_1(\phi_Q(q_i)||\phi_D(d_{i1})||\phi_D(d_{i2}))
+        \mathcal{L}(q_i,d_{i1},d_{i2},y_i) + \lambda\;L_1(\phi(q_i)||\psi(d_{i1})||\psi(d_{i2}))
     \end{equation}
     where $\mathcal{L}$ - hinge loss \cite{IRNLP}, $q_i$ - query, $d_{i1}$ and $d_{i2}$ - two
     document candidates, $y_i \in \{-1, 1\}$ - label that shows the relevance between the document
@@ -343,7 +351,15 @@
     \end{equation}
     where $\lambda_1$ and $\lambda_2$ are tunable hyper-parameters, first is for terms expected not to be
     expanded, second one is for terms that appear in the target text, and \emph{G} is is the dense
-    gating probability distribution for \emph{p} \cite{SparTerm}.\\\par
+    gating probability distribution for \emph{p} \cite{SparTerm}.
+
+    \paragraph{Joint training.}
+    The importance predictor and gating controller are trained jointly because the supervisory
+    ranking signal can also be leveraged to guide the training of the gating controller:
+    \begin{equation}
+        L = L_{rank} + L_{exp}
+    \end{equation}\\
+
     Thus, SparTerm provides a function that is used to map the frequency-based and bag-of-words
     representation to a sparse term importance distribution in the whole vocabulary.
     This model also has limitation: since the gating mechanism is learned in advance, this prevents
