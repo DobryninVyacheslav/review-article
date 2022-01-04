@@ -272,7 +272,7 @@
     window to read the input words and encodes their ngrams.
     Then embeddings are collected for each term \cite{SNRM}.
 
-    \paragraph{Loss Function}
+    \paragraph{Loss function.}
     The loss function for the $i^{th}$ training instance has the following form:
     \begin{equation}
         \mathcal{L}(q_i,d_{i1},d_{i2},y_i) + \lambda\;L_1(\phi(q_i)||\psi(d_{i1})||\psi(d_{i2}))
@@ -327,7 +327,7 @@
     \end{equation}
     where L is the input sequence length.
 
-    \paragraph{Training the importance predictor.}
+    \paragraph{The importance predictor loss function.}
     There is a set of N training instances $R=\{(q_1, d_{1+}, d_{1-}), ..., (q_N, d_N+, d_N-)\}$,
     each of which contains a query $q_i$, a positive document (passage) $d_{i+}$ and a negative
     one $d_i-$, such that the first document is more relevant the query than the second one.
@@ -341,7 +341,7 @@
     where $s(q,d)$ is denote the ranking score obtained via dot product between $d$ and $q$
     representations from Equation (\ref{eqn:sparterm:mapping-process}).
 
-    \paragraph{Training the gating controller.}
+    \paragraph{The gating controller loss function.}
     Consider a passage-query/summary parallel corpus \emph{C}, which contains passage \emph{p}, the
     corresponding target text \emph{t}, and the binary bag-of-words vector of \emph{t} (\emph{T}).
     In order to maximize probability values of all terms in vocabulary, binary cross-entropy loss
@@ -353,7 +353,7 @@
     expanded, second one is for terms that appear in the target text, and \emph{G} is is the dense
     gating probability distribution for \emph{p} \cite{SparTerm}.
 
-    \paragraph{Joint training.}
+    \paragraph{Joint loss function.}
     The importance predictor and gating controller are trained jointly because the supervisory
     ranking signal can also be leveraged to guide the training of the gating controller:
     \begin{equation}
@@ -454,7 +454,7 @@
     \end{equation}
     where $Embed(q)^T$ and $Embed(d)$ are $\phi(q)$ and $\psi(d)$ respectively.
 
-    \paragraph{Training}
+    \paragraph{Loss function.}
     During training, it is necessary to make a embeddings inner product for the relevant
     query-document pairs larger than for the irrelevant ones.
     The model uses the MultiLabelMarginLoss \cite{multiLabelMarginLoss} as loss function:
