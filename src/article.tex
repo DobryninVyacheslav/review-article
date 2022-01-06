@@ -375,6 +375,16 @@
         L = L_{rank} + L_{exp}
     \end{equation}\\
 
+    \paragraph{Training.}
+    BERT (12-layer, 768-hidden, 12-heads, 110M parameters) is used for the Gating Controller
+    and Importance Predictor.
+    They are initialized with pre-trained models.
+    First, the Gating Controller is fine-tuned for 50k iterations where
+    $\lambda_1 = 1e - 3$ and $\lambda_2 = 1$.
+    Then Gating Controller parameters are fixed and SparTerm model is fine-tuned jointly for 100k
+    iterations.
+    Adam optimizer is selected with the learning rate $2 \cdot 10^{-5}$.\\\par
+
     Thus, SparTerm provides a function that is used to map the frequency-based and bag-of-words
     representation to a sparse term importance distribution in the whole vocabulary.
     This model also has limitation: since the gating mechanism is learned in advance, this prevents
