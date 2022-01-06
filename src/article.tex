@@ -275,6 +275,7 @@
     \paragraph{Loss function.}
     The loss function for the $i^{th}$ training instance has the following form:
     \begin{equation}
+        \label{eqn:snrm:loss-function}
         \mathcal{L}(q_i,d_{i1},d_{i2},y_i) + \lambda\;L_1(\phi(q_i)||\psi(d_{i1})||\psi(d_{i2}))
     \end{equation}
     where $\mathcal{L}$ - hinge loss \cite{IRNLP}, $q_i$ - query, $d_{i1}$ and $d_{i2}$ - two
@@ -284,7 +285,21 @@
     \begin{math}
         L_1(\vec{\upsilon}) = \sum_{i=1}^{|\vec{\upsilon}|}|\vec{\upsilon}_i|
     \end{math}
-    ) and $||$ is concatenation sign.\\\par
+    ) and $||$ is concatenation sign.
+
+    \paragraph{Training.}
+    Weak supervision is used to train the model.
+
+    Adam is selected as the optimizer.
+    The learning rate is chosen from
+    ${\{5 \cdot 10^{-5}, 1 \cdot 10^{-4}, 5 \cdot 10^{-4}, 1 \cdot 10^{-3}, 5 \cdot 10^{-3}\}}$,
+    the batch size from \{32, 64, 128\}.
+    Ngram representation network has n equal to 5 and two or three hidden layers.
+    Hidden layer sizes and the output layer sizes are selected from \{100, 300, 500\} and
+    \{5k, 10k, 20k\}, respectively.
+    The hyper-parameter $\lambda$ (see Equation (\ref{eqn:snrm:loss-function})) is chosen from the
+    $[5 \cdot 10^{-9}, 1 \cdot 10^{-7}]$ interval.
+    The dropout rate is selected from \{0.6, 0.8, 1\}.\\\par
 
     However, SNRM has disadvantage, namely, it loses the interpretability of the original terms,
     which can be significant for industrial systems.
