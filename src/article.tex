@@ -500,7 +500,18 @@
     \end{multline}
     where $(q,d_1^+,...,d_m^+,d_{m+1}^-,...,d_n^-)$ is one instance of the input training batch,
     \emph{q} is query, \emph{m} is quantity of relevant documents and \emph{n - m} is quantity
-    of irrelevant documents\cite{RepBERT}.\\\par
+    of irrelevant documents\cite{RepBERT}.
+
+    \paragraph{Training.}
+    BERT base model is adapted.
+    It consists of 12 encoder layers with vector dimension of 768.
+    The model is fine-tuned for 350k iterations with batch size of 26 and gradient accumulation
+    steps of 2.
+    Adam optimizer is selected with the learning rate $3 \cdot 10^{-6}$,
+    $\lambda_1 = 0.9$ and $\lambda_2 = 0.999$, $L_2$ weight decay of 0.01, learning rate warmup
+    over the first 10k iterations, and linear decay of the learning rate.
+    Dropout probability is 0.1 on all layers.\newline
+
     The model has a simple architecture in order to improve work efficiency.
 
 % \subsection{UHD-BERT}
