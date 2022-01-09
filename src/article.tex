@@ -373,7 +373,7 @@
     ranking signal can also be leveraged to guide the training of the gating controller:
     \begin{equation}
         L = L_{rank} + L_{exp}
-    \end{equation}\\
+    \end{equation}
 
     \paragraph{Training.}
     BERT (12-layer, 768-hidden, 12-heads, 110M parameters) is used for the Gating Controller
@@ -437,7 +437,7 @@
     \end{equation}
     where $L_{reg}$ is a sparse regularisation ($L_1$ or $L_{FLOPS}$), $\lambda_q$ and
     $\lambda_d$ are tunable hyper-parameters to control the sparsity of the query and the
-    document. \newline
+    document.
 
     \paragraph{Training.}
     The models are initialized with the BERT-base pre-trained models.
@@ -446,7 +446,8 @@
     To reduce the contribution of the regularizer in the early stages of training, a planner for
     $\lambda$ is used, which quadratically increases $\lambda$ at each training iteration, up to a
     given step (50k), from which it is fixed for another 100k iterations.
-    The hyper-parameter $\lambda$ is chosen from the $[1 \cdot 10^{-4}, 1 \cdot 10^{-1}]$ interval.
+    The hyper-parameter $\lambda$ is chosen from the $[1 \cdot 10^{-4}, 1 \cdot 10^{-1}]$
+    interval.\newline
 
     As a result, SPLADE is simple and effective model in information retrieval tasks.
 
