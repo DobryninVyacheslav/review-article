@@ -496,7 +496,7 @@
     \begin{multline}
         \mathnormal{L}(q,d_1^+,...,d_m^+,d_{m+1}^-,...,d_n^-) = \\
         \frac{1}{n} \cdot \sum_{1 \leq i \leq m,m < j \leq n}
-        max(0, 1 - (Rel(q,d_i^+) - Rel(q,d_j^-)))
+        max(0, 1 - (s(q,d_i^+) - s(q,d_j^-)))
     \end{multline}
     where $(q,d_1^+,...,d_m^+,d_{m+1}^-,...,d_n^-)$ is one instance of the input training batch,
     \emph{q} is query, \emph{m} is quantity of relevant documents and \emph{n - m} is quantity
